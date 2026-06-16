@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Workspace Board</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="workspace-container">
+      <header>
+        <h1>Workspace Pipeline</h1>
+        <div class="input-area">
+          <input
+            type="text"
+            id="task-input"
+            placeholder="Initiate new task..."
+            autocomplete="off"
+          />
+          <button id="add-task-btn">Deploy</button>
+        </div>
+      </header>
+
+      <!-- The Kanban Grid -->
+      <div class="board-grid">
+        <!-- Column 1 -->
+        <div class="column" id="col-todo">
+          <div class="column-header">
+            <span class="dot todo-dot"></span> Queue
+          </div>
+          <div class="task-list" id="list-todo"></div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="column" id="col-progress">
+          <div class="column-header">
+            <span class="dot progress-dot"></span> In Progress
+          </div>
+          <div class="task-list" id="list-progress"></div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="column" id="col-done">
+          <div class="column-header">
+            <span class="dot done-dot"></span> Completed
+          </div>
+          <div class="task-list" id="list-done"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
